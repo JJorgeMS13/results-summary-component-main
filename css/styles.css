@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,800;1,800&display=swap');
+
+:root {
+    /*Colors Primary  */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Colors Gradients */
+    --Light-slate-blue: hsl(252, 100%, 67%); /* (background) */
+    --Light-royal-blue: hsl(241, 81%, 54%); /* (background) */
+    --Violet-blue: hsla(256, 72%, 46%, 1); /* (circle) */
+    --Persian-blue: hsla(241, 72%, 46%, 0); /* (circle) */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Hanken Grotesk", sans-serif;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 37.5rem;
+}
+.card__top {
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    padding: 2.8rem 6.2rem 4rem 6.2rem;
+    min-height: 35.6rem;
+}
+.card_result {
+    color: var(--Light-lavender);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.score {
+    background-image: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 14.2rem;
+    width: 14.2rem;
+}
+.score h1 {
+    color: var(--White);
+    font-size: 5rem;
+}
+.score p {
+    color: hsla(241, 100%, 89%, .5);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.card_title {
+    color: var(--White);
+    font-size: 2rem;
+}
+.card_paragraph {
+    color: var(--Light-lavender);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.card__bottom {
+    min-height: 45.4rem;
+    padding: 3rem;
+    width: 100%;
+}
+.card__bottom p {
+    color: var(--Dark-gray-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.card__score {
+    align-items: center;
+    border-radius: 1.2rem;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 0 1.6rem 0 2rem;
+    height: 5.8rem;
+    width: 100%;
+}
+.card__score div img {
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+.card__score p {
+    color: black;
+    font-size: 1.6rem;
+}
+.card__score p span {
+    color: hsla(224, 30%, 27%, .5);
+}
+.reaction {
+    background-color: hsla(0, 100%, 67%, .1);
+    color: var(--Light-red);
+}
+.memory {
+    background-color: hsla(39, 100%, 56%, .1);
+    color: var(--Orangey-yellow);
+}
+.verbal {
+    background-color: hsla(166, 100%, 37%, .1);
+    color: var(--Green-teal);
+}
+.visual {
+    background-color: hsla(234, 85%, 45%, .1);
+    color: var(--Cobalt-blue);
+}
+.card__bottom button {
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 1.8rem 0;
+    border: none;
+    border-radius: 3rem;
+}
+/* ----------Footer----------- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ------------------(> 768px)---------------- */
+@media screen and (min-width: 48rem){
+    .container {
+        justify-content: center;
+    }
+}
+/* ------------------(>1440px)---------------- */
+@media screen and (min-width: 90rem) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        flex-direction: row;
+        height: auto;
+        box-shadow: 8px 14px 12px 3px #ebebf8;
+        border-radius: 3rem;
+    }
+    .card {
+        height: 51.2rem;
+        width: 36.8rem;
+    }
+    .card__top {
+        border-radius: 3rem;
+        z-index: 1;
+    }
+    .card__bottom {
+        padding-left: 5.4rem;
+        width: 39.9rem;
+    }
+}
